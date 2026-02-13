@@ -120,7 +120,7 @@ helm install my-kafka bitnami/kafka --set image.repository=bitnamilegacy/kafka
 2. La base de données source
 ```
 cd eurynome
-apply -f eurynome-db.yaml
+oc apply -f eurynome-db.yaml
 oc rsync ./db eurynome-db-xxxxxxxxxx-yyyyyy:/tmp
 oc rsh eurynome-db-xxxxxxxxxx-yyyyyy
 cd /tmp
@@ -135,7 +135,7 @@ cd ..
 2. La base de données destination
 ```
 cd mygreaterp
-apply -f mygreaterp-db.yaml
+oc apply -f mygreaterp-db.yaml
 oc rsync ./db mygreaterp-db-xxxxxxxxxx-yyyyyy:/tmp
 oc rsh mygreaterp-db-xxxxxxxxxx-yyyyyy
 cd /tmp
