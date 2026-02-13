@@ -32,7 +32,7 @@ spec:
             claimName: eurynome-pvc
       containers:
         - name: container
-          image: docker.io/mysql:latest
+          image: docker.io/mysql:8.3.0
           ports:
             - containerPort: 3306
               protocol: TCP

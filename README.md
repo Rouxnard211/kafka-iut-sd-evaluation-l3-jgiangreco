@@ -127,6 +127,7 @@ cd /tmp
 cat eurynome.sql | /usr/bin/mysql -uroot -peurynome
 mysql -uroot -peurynome
 grant all privileges on eurynome.* to 'eurynomeuser'@'%';
+GRANT RELOAD,REPLICATION SLAVE,REPLICATION MASTER ON *.* TO 'eurynomeuser'@'%';
 flush privileges;
 exit
 cd ..
@@ -142,7 +143,6 @@ cd /tmp
 cat init-mygreaterp.sql | /usr/bin/mysql -uroot -pmygreaterp
 mysql -uroot -pmygreaterp
 grant all privileges on mygreaterp.* to 'mygreaterpuser'@'%';
-GRANT RELOAD ON *.* TO 'eurynomeuser'@'%';
 flush privileges;
 cd ..
 ```
