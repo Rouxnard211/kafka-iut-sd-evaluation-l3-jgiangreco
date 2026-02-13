@@ -142,6 +142,7 @@ cd /tmp
 cat init-mygreaterp.sql | /usr/bin/mysql -uroot -pmygreaterp
 mysql -uroot -pmygreaterp
 grant all privileges on mygreaterp.* to 'mygreaterpuser'@'%';
+GRANT RELOAD ON *.* TO 'eurynomeuser'@'%';
 flush privileges;
 cd ..
 ```
